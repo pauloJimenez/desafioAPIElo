@@ -1,5 +1,6 @@
 package com.desafio.pedidos.domain.entity;
 
+import org.springframework.data.annotation.Id;
 //import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -15,6 +16,8 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 public class Pedido {
+	@Id	
+	private String id;
 	@Field("NR_PEDIDO")
 	private String numeroPedido;
 	@Field("ID_CLIENTE")
